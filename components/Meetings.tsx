@@ -23,7 +23,7 @@ export default function Meetings({ meetings }: MeetingsProps) {
       <CardContent className="space-y-4">
         {meetings.map((meeting, index) => (
           <div key={index} className="flex items-start gap-3">
-            <div className="flex h-10 w-10 flex-col items-center justify-center rounded-lg bg-slate-100 text-xs text-slate-500 dark:bg-white/[0.05] dark:text-white/70">
+            <div className="flex h-10 w-10 flex-col items-center justify-center rounded-lg bg-slate-100 text-xs text-slate-500 dark:bg-white/5 dark:text-white/70">
               <span className="text-[10px] uppercase text-sky-500">Mon</span>
               <span className="font-semibold text-slate-800 dark:text-white">
                 {meeting.date}

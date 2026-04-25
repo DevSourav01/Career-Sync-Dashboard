@@ -41,12 +41,12 @@ export default function OverallProgress() {
 
           <div className="flex items-center gap-2 text-sm text-slate-700 dark:text-white/80">
             <span className="h-2.5 w-2.5 rounded-full bg-red-300" />
-            <span>27 Upcoming Project</span>
+            <span className="md:whitespace-nowrap">27 Upcoming Project</span>
           </div>
         </div>
 
         <div className="relative">
-          <ChartContainer config={chartConfig} className="h-35.5 w-35.5">
+          <ChartContainer config={chartConfig} className="h-37 w-37">
             <PieChart>
               <Pie
                 data={progressData}

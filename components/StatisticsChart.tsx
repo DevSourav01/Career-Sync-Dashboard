@@ -54,7 +54,7 @@ export default function StatisticsChart() {
       </CardHeader>
 
       <CardContent>
-        <ChartContainer config={chartConfig} className="h-[320px] w-full">
+        <ChartContainer config={chartConfig} className="h-80 w-full">
           <LineChart
             accessibilityLayer
             data={chartData}
