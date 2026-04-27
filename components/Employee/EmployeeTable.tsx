@@ -11,7 +11,7 @@ import {
 export default function EmployeeTable({ employees }: { employees: Employee[] }) {
   return (
     <div className="mt-4 overflow-x-auto">
-      <Table className="w-full md:min-w-[800px]">
+      <Table className="w-full md:min-w-200">
         <TableHeader className="hidden sm:table-header-group">
           <TableRow className="border-white/5 hover:bg-transparent">
             <TableHead className="text-xs font-medium uppercase tracking-wider">Full Name</TableHead>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {  Plus_Jakarta_Sans} from "next/font/google";
 import "./globals.css";
 import AppSidebar from "@/components/AppSidebar";
 import Navbar from "@/components/Navbar";
@@ -8,14 +8,10 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { cookies } from "next/headers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-jakarta",
 });
 
 export const metadata: Metadata = {
@@ -32,7 +28,7 @@ export default async function RootLayout({
   const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
   return (
     <html lang="en" suppressHydrationWarning >
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${jakarta.variable} antialiased`}>
         <ThemeProvider  attribute="class"
             defaultTheme="system"
             enableSystem

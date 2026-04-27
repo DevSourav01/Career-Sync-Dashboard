@@ -1,5 +1,6 @@
 import EmployeeTable from "@/components/Employee/EmployeeTable";
 import Header from "@/components/Employee/Header";
+import SearchInput from "@/components/Employee/SearchInput";
 
 type DummyUser = {
   id: number;
@@ -59,27 +60,68 @@ async function getEmployees(): Promise<Employee[]> {
   }));
 }
 
-export default async function EmployeesPage() {
+// export default async function EmployeesPage() {
+//   const employees = await getEmployees();
+
+//   return (
+//     <div className="min-h-screen  px-4 py-6 sm:px-6 lg:px-8">
+//       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+//         <div>
+//           <h1 className="text-2xl font-semibold sm:text-3xl">Employees</h1>
+//           <p className="text-sm ">Current Employees</p>
+//         </div>
+
+//        <Input placeholder="Search..." />
+//       </div>
+
+//       <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-4 sm:p-5">
+//         <Header />
+//         <EmployeeTable employees={employees} />
+//       </div>
+//     </div>
+//   );
+// }
+
+// app/employees/page.tsx
+export default async function EmployeesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ search?: string; sort?: string; status?: string }>;
+}) {
+  const { search = "", sort = "position", status = "all" } = await searchParams;
+
   const employees = await getEmployees();
 
+
+  // Filter
+  const filtered = employees.filter((emp) => {
+    const matchesSearch =
+      emp.name.toLowerCase().includes(search.toLowerCase()) ||
+      emp.email.toLowerCase().includes(search.toLowerCase());
+    const matchesStatus = status === "all" || emp.status === status;
+    return matchesSearch && matchesStatus;
+  });
+
+  // Sort
+  if (sort === "name") {
+    filtered.sort((a, b) => a.name.localeCompare(b.name));
+  } else if (sort === "date") {
+    filtered.sort((a, b) => a.startDate.localeCompare(b.startDate));
+  }
+
   return (
-    <div className="min-h-screen  px-4 py-6 sm:px-6 lg:px-8">
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+    <div className="min-h-screen px-2 py-6 sm:px-6 lg:px-8">
+      <div className="flex flex-col gap-5 lg:w-90 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <h1 className="text-2xl font-semibold sm:text-3xl">Employees</h1>
-          <p className="text-sm ">Current Employees</p>
+          <p className="text-sm">Current Employees</p>
         </div>
-
-        <input
-          type="search"
-          placeholder="Search..."
-          className="h-10 w-full rounded-md border border-white/10 bg-transparent px-3 py-2 text-sm  outline-none sm:w-70"
-        />
+        <SearchInput /> {/* client component */}
       </div>
 
       <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-4 sm:p-5">
-        <Header />
-        <EmployeeTable employees={employees} />
+        <Header count={filtered.length} />
+        <EmployeeTable employees={filtered} />
       </div>
     </div>
   );
