@@ -29,13 +29,13 @@ export default function UpcomingProjects({
     <Card className="border-slate-200 bg-white text-slate-900 shadow-sm dark:border-white/5 dark:bg-[#1b1d22] dark:text-white dark:shadow-lg">
       <CardHeader className="flex flex-row items-start justify-between space-y-0">
         <div>
-          <CardTitle className="text-xl">Upcoming Projects</CardTitle>
+          <CardTitle className="text-lg">Upcoming Projects</CardTitle>
           <CardDescription className="mt-1 text-slate-500 dark:text-white/50">
             Total 22 to view
           </CardDescription>
         </div>
 
-        <button className="text-sm font-medium text-slate-700 dark:text-blue-400">
+        <button className="text-lg font-medium text-slate-700 dark:text-blue-400">
           View all
         </button>
       </CardHeader>
