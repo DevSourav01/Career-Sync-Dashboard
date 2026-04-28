@@ -52,7 +52,7 @@ export default function Home() {
     <main className="min-h-screen text-slate-900 dark:text-white md:p-4">
       <div>
         <h1 className="text-2xl">Dashboard</h1>
-      <p className="mb-5 text-sm">Hello, Sourav Welcome to the CareerSync</p>
+      <p className="mb-5 text-sm">Hello, Sourav 👋 Welcome to CareerSync</p>
       </div>
       <div className="grid grid-cols-1 gap-5 xl:grid-cols-[1fr_290px]">
         <div className="space-y-5">
