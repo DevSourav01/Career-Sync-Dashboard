@@ -27,8 +27,8 @@ export default async function RootLayout({
    const cookieStore = await cookies();
   const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
   return (
-    <html lang="en" suppressHydrationWarning >
-      <body className={`${jakarta.variable} antialiased`}>
+<html lang="en" suppressHydrationWarning className={jakarta.variable}>
+        <body className="font-sans antialiased">
         <ThemeProvider  attribute="class"
             defaultTheme="system"
             enableSystem

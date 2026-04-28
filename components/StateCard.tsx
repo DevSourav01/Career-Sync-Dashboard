@@ -20,7 +20,7 @@ export default function StateCard({
 
   return (
     <Card className="border-slate-200 bg-white text-slate-900 shadow-sm dark:border-white/5 dark:bg-[#1b1d22] dark:text-white dark:shadow-lg">
-      <CardContent className="flex items-center justify-between p-5">
+      <CardContent className="flex items-center justify-between px-2">
         <div>
           <p className="text-sm whitespace-nowrap font-medium text-slate-500 dark:text-white/80">
             {title}

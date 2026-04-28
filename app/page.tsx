@@ -55,7 +55,7 @@ export default function Home() {
       </div>
       <div className="grid grid-cols-1 gap-5 xl:grid-cols-[1fr_290px]">
         <div className="space-y-5">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-3">
             {cardData.map((card) => (
               <StateCard key={card.title} {...card} />
             ))}

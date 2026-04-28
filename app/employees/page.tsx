@@ -60,28 +60,6 @@ async function getEmployees(): Promise<Employee[]> {
   }));
 }
 
-// export default async function EmployeesPage() {
-//   const employees = await getEmployees();
-
-//   return (
-//     <div className="min-h-screen  px-4 py-6 sm:px-6 lg:px-8">
-//       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-//         <div>
-//           <h1 className="text-2xl font-semibold sm:text-3xl">Employees</h1>
-//           <p className="text-sm ">Current Employees</p>
-//         </div>
-
-//        <Input placeholder="Search..." />
-//       </div>
-
-//       <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-4 sm:p-5">
-//         <Header />
-//         <EmployeeTable employees={employees} />
-//       </div>
-//     </div>
-//   );
-// }
-
 // app/employees/page.tsx
 export default async function EmployeesPage({
   searchParams,
@@ -110,7 +88,7 @@ export default async function EmployeesPage({
   }
 
   return (
-    <div className="min-h-screen px-2 py-6 sm:px-6 lg:px-8">
+    <div className="min-h-screen px-2 py-2 sm:px-6 lg:px-8 ">
       <div className="flex flex-col gap-5 lg:w-90 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <h1 className="text-2xl font-semibold sm:text-3xl">Employees</h1>
