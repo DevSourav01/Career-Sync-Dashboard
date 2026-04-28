@@ -70,7 +70,6 @@ export default async function EmployeesPage({
 
   const employees = await getEmployees();
 
-
   // Filter
   const filtered = employees.filter((emp) => {
     const matchesSearch =
@@ -99,7 +98,12 @@ export default async function EmployeesPage({
 
       <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-4 sm:p-5">
         <Header count={filtered.length} />
-        <EmployeeTable employees={filtered} />
+
+        {search.trim() !== "" && filtered.length === 0 ? (
+          <p className="mt-4 text-sm text-gray-400">No result found</p>
+        ) : (
+          <EmployeeTable employees={filtered} />
+        )}
       </div>
     </div>
   );

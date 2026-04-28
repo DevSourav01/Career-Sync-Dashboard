@@ -12,39 +12,40 @@ const cardData = [
 ]
 
 const projects = [
-  "NFT website landing Page design",
-  "Development",
-  "NFT website landing Page design",
-  "NFT website landing Page design",
-  "NFT website landing Page design",
-  "NFT website landing Page design",
-  "NFT website landing Page design",
-  "NFT website landing Page design",
-  "NFT website landing Page design",
-]
+  "Career Sync Dashboard UI Revamp",
+  "Employee Directory Search Module",
+  "Analytics Overview Page",
+  "Authentication Flow Setup",
+  "Application Tracker Board",
+  "Interview Pipeline Dashboard",
+  "Profile Settings Panel",
+  "Notification Center Design",
+  "Admin Reports Module",
+];
 
 const monthlyTasks = [
-  "Digital Agency landing page design",
-  "Digital Agency landing page design",
-]
+  "Finalize employee table sorting and filtering",
+  "Build responsive dashboard sidebar",
+];
 
 const meetings = [
   {
     date: "08",
-    title: "Meeting with the manager",
-    time: "08:30 AM-11:00 AM",
+    title: "Sprint planning with product team",
+    time: "08:30 AM - 09:15 AM",
   },
   {
     date: "09",
-    title: "Interview",
-    time: "10:30 AM-11:30 AM",
+    title: "Frontend design review",
+    time: "10:30 AM - 11:15 AM",
   },
   {
-    date: "09",
-    title: "Interview with developers",
-    time: "10:30 AM-12:00 AM",
+    date: "12",
+    title: "Client feedback discussion",
+    time: "02:00 PM - 03:00 PM",
   },
-]
+  
+];
 
 export default function Home() {
   return (
