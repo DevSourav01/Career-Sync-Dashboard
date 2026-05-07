@@ -60,7 +60,6 @@ async function getEmployees(): Promise<Employee[]> {
   }));
 }
 
-// app/employees/page.tsx
 export default async function EmployeesPage({
   searchParams,
 }: {
