@@ -35,7 +35,7 @@ export const sidebarItems = [
   { title: "Calendar", url: "/calendar", icon: Calendar, badge: "+" },
   { title: "Employees", url: "/employees", icon: Users, badge: null },
   { title: "Vacancies", url: "/hiring", icon: Briefcase, badge: null },
-  { title: "Candidates", url: "/candidates", icon: UserSearch, badge: null },
+  { title: "Candidates", url: "/candidate", icon: UserSearch, badge: null },
   { title: "Projects", url: "/projects", icon: FolderKanban, badge: null },
   { title: "Tasks", url: "/tasks", icon: CheckSquare, badge: null },
   { title: "Statistics", url: "/statistics", icon: BarChart2, badge: null },

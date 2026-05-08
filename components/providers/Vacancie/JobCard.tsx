@@ -4,8 +4,8 @@ import {
   AvatarFallback,
   AvatarGroup,
   AvatarImage,
-} from "../ui/avatar";
-import { Button } from "../ui/button";
+} from "../../ui/avatar";
+import { Button } from "../../ui/button";
 
 const jobs = [
   {
@@ -16,7 +16,7 @@ const jobs = [
     salary: "₹3.5-8 LPA",
     skills: ["HTML", "CSS", "JS", "React"],
     remote: true,
-    type: "Fresher"
+    type: "Fresher",
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const jobs = [
     salary: "₹3-6 LPA",
     skills: ["React Hooks", "Next.js", "Git"],
     remote: false,
-    type: "Trainee"
+    type: "Trainee",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const jobs = [
     salary: "₹10k-15k/month",
     skills: ["JS", "React/Vue", "Responsive"],
     remote: true,
-    type: "Intern"
+    type: "Intern",
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const jobs = [
     salary: "₹3.5-5 LPA",
     skills: ["HTML/CSS", "React", "Debugging"],
     remote: false,
-    type: "Fresher"
+    type: "Fresher",
   },
   {
     id: 5,
@@ -56,7 +56,7 @@ const jobs = [
     salary: "₹4-7 LPA",
     skills: ["React", "Next.js", "State Management"],
     remote: true,
-    type: "Fresher"
+    type: "Fresher",
   },
   {
     id: 6,
@@ -66,7 +66,7 @@ const jobs = [
     salary: "₹4-6 LPA",
     skills: ["JS Frameworks", "Tailwind CSS"],
     remote: false,
-    type: "Junior"
+    type: "Junior",
   },
   {
     id: 7,
@@ -76,7 +76,7 @@ const jobs = [
     salary: "₹4.3-6 LPA",
     skills: ["React/Redux", "Testing"],
     remote: false,
-    type: "Intern"
+    type: "Intern",
   },
   {
     id: 8,
@@ -86,7 +86,7 @@ const jobs = [
     salary: "₹3-7 LPA",
     skills: ["React.js", "Node basics"],
     remote: true,
-    type: "Entry"
+    type: "Entry",
   },
   {
     id: 9,
@@ -96,7 +96,7 @@ const jobs = [
     salary: "₹1.2-2.4 LPA",
     skills: ["HTML/CSS/JS", "React"],
     remote: true,
-    type: "Fresher"
+    type: "Fresher",
   },
   {
     id: 10,
@@ -106,7 +106,7 @@ const jobs = [
     salary: "₹3-6 LPA",
     skills: ["JS", "React", "Responsive"],
     remote: false,
-    type: "Fresher"
+    type: "Fresher",
   },
   {
     id: 11,
@@ -116,7 +116,7 @@ const jobs = [
     salary: "₹12k-30k/month",
     skills: ["HTML", "CSS", "JS", "React/Angular/Vue"],
     remote: true,
-    type: "Internship"
+    type: "Internship",
   },
   {
     id: 12,
@@ -126,7 +126,7 @@ const jobs = [
     salary: "₹5-7 LPA",
     skills: ["Next.js", "React Native", "Figma", "Tailwind"],
     remote: true,
-    type: "Mid-Level"
+    type: "Mid-Level",
   },
   {
     id: 13,
@@ -136,7 +136,7 @@ const jobs = [
     salary: "₹4-8 LPA",
     skills: ["React.js", "UI Design", "TypeScript"],
     remote: true,
-    type: "Contractor"
+    type: "Contractor",
   },
   {
     id: 14,
@@ -146,7 +146,7 @@ const jobs = [
     salary: "₹75-120 LPA",
     skills: ["React.js", "JavaScript", "REST APIs"],
     remote: true,
-    type: "Senior"
+    type: "Senior",
   },
   {
     id: 15,
@@ -156,8 +156,8 @@ const jobs = [
     salary: "₹30-37 LPA",
     skills: ["Vue.js", "Python", "Full Stack"],
     remote: true,
-    type: "Fresher"
-  }
+    type: "Fresher",
+  },
 ];
 export default function JobCard() {
   return (
@@ -181,11 +181,17 @@ export default function JobCard() {
                   <AvatarFallback>HR</AvatarFallback>
                 </Avatar>
                 <Avatar>
-                  <AvatarImage src="https://github.com/maxleiter.png" alt="HR 2" />
+                  <AvatarImage
+                    src="https://github.com/maxleiter.png"
+                    alt="HR 2"
+                  />
                   <AvatarFallback>RK</AvatarFallback>
                 </Avatar>
                 <Avatar>
-                  <AvatarImage src="https://github.com/evilrabbit.png" alt="HR 3" />
+                  <AvatarImage
+                    src="https://github.com/evilrabbit.png"
+                    alt="HR 3"
+                  />
                   <AvatarFallback>CR</AvatarFallback>
                 </Avatar>
                 <span className="gap-1"> + 50 Other Candiadates</span>
