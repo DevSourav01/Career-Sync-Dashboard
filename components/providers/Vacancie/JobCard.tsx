@@ -164,39 +164,54 @@ export default function JobCard() {
     <div>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4">
         {jobs.map((job) => (
-          <div key={job.id} className="rounded-lg p-4 shadow border ">
+          <div
+            key={job.id}
+            className="rounded-lg p-4 shadow border flex flex-col"
+          >
             <div className="flex flex-row">
               <h1 className="font-bold text-md">{job.title}</h1>
             </div>
 
-            <div className="flex flex-col mt-2 gap-2">
-              <h1>Company: {job.company}</h1>
-              <h1>Location: {job.location}</h1>
-              <h1>Salary: {job.salary}</h1>
-              <h1>Type: {job.type}</h1>
+            <div className="flex flex-col mt-2 gap-2 flex-1 justify-between">
+              <div className="flex flex-col gap-2">
+                <h1>Company: {job.company}</h1>
+                <h1>Location: {job.location}</h1>
+                <h1>Salary: {job.salary}</h1>
+                <h1>Type: {job.type}</h1>
 
-              <AvatarGroup className="mt-3">
-                <Avatar>
-                  <AvatarImage src="https://github.com/shadcn.png" alt="HR 1" />
-                  <AvatarFallback>HR</AvatarFallback>
-                </Avatar>
-                <Avatar>
-                  <AvatarImage
-                    src="https://github.com/maxleiter.png"
-                    alt="HR 2"
-                  />
-                  <AvatarFallback>RK</AvatarFallback>
-                </Avatar>
-                <Avatar>
-                  <AvatarImage
-                    src="https://github.com/evilrabbit.png"
-                    alt="HR 3"
-                  />
-                  <AvatarFallback>CR</AvatarFallback>
-                </Avatar>
-                <span className="gap-1"> + 50 Other Candiadates</span>
-              </AvatarGroup>
-              <Button className="hover:cursor-pointer"> View Details</Button>
+                <div className="flex items-center gap-2 mt-3">
+                  <AvatarGroup>
+                    <Avatar>
+                      <AvatarImage
+                        src="https://github.com/shadcn.png"
+                        alt="HR 1"
+                      />
+                      <AvatarFallback>HR</AvatarFallback>
+                    </Avatar>
+                    <Avatar>
+                      <AvatarImage
+                        src="https://github.com/maxleiter.png"
+                        alt="HR 2"
+                      />
+                      <AvatarFallback>RK</AvatarFallback>
+                    </Avatar>
+                    <Avatar>
+                      <AvatarImage
+                        src="https://github.com/evilrabbit.png"
+                        alt="HR 3"
+                      />
+                      <AvatarFallback>CR</AvatarFallback>
+                    </Avatar>
+                  </AvatarGroup>
+                  <span className="text-md text-muted-foreground">
+                    + 50 Others
+                  </span>
+                </div>
+              </div>
+
+              <Button className="hover:cursor-pointer mt-auto w-full">
+                View Details
+              </Button>
             </div>
           </div>
         ))}
